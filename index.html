@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFi Configuration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #2e8b57, #1e90ff);
+            color: #fff;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transform: scale(0.4);
+            animation: fadeInScale 1.5s forwards;
+            transition: background-color 0.5s ease;
+        }
+
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            font-size: 22px;
+            text-transform: uppercase;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 16px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            font-weight: bold;
+        }
+
+        input::placeholder{
+            text-align: center;
+            font-weight: normal;
+            color: #666;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: #007acc;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 122, 204, 0.6);
+        }
+
+        button:hover {
+            background: #00a2e8;
+            box-shadow: 0 6px 15px rgba(0, 162, 232, 0.8);
+        }
+
+        .footer {
+            margin-top: 15px;
+            font-size: 12px;
+            opacity: 0.9;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>WiFi Configuration</h2>
+        <form action="/" method="get">
+            <label for="ssid">Select your network:</label>
+            <select name="ssid" id="ssid">
+                <!-- NETWORKS_PLACEHOLDER -->
+            </select>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="**********">
+            
+            <button type="submit">Join</button>
+        </form>
+        <div class="footer">Powered by Wall Fox 🦊</div>
+    </div>
+</body>
+</html>
